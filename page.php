@@ -33,7 +33,6 @@
       <?php wp_reset_postdata(); ?>
     <?php endif; ?>
 
-      <h1>hi!</h1>
       <?php // Start the loop ?>
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 

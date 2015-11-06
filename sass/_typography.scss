@@ -1,8 +1,57 @@
+
+$headerfont: 'Montserrat', sans-serif;
+$bodyfont: 'Playfair Display', serif;
+
+@mixin fontSize($number) {
+	font-size: $number * 1px;
+	font-size: ($number / 10) * 1rem;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	@include fontSize(12);
+	font-family: $headerfont;
+}
+
+h1 {
+ 	font-family: $headerfont;
+ 	text-transform: uppercase;
+ 	font-weight: light;
+ 	@include fontSize(48);
+ 	color: white;
+ 	
+}
+
+.fa-bars {
+	color: white;
+}
+
+h2 {
+	font-family: $headerfont;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	@include fontSize(24);
+
+}
+p {
+	font-family: $bodyfont;
+	@include fontSize(12);
+}
+
+.btn p {
+	font-family: $headerfont;
+	text-transform: uppercase;
+	text-align: center;
+}
+
 a {
-	color: #BA209B;
+	color: black;
 	text-decoration: none;
 	&:hover {
-		color: #D424B1;
+		color: grey;
 	}
 }
 
@@ -50,6 +99,7 @@ dd {
 
 ul li, ol li {
 	padding: 3px;
+
 }
 
 /*PRE*/

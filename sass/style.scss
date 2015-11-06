@@ -1,9 +1,9 @@
 /*
-* Theme Name: HackerYou Starter Theme
+* Theme Name: Portfolio Site.
 * Theme URI: http://hackeryou.com;
-* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Description: Camille van Groll's Personal Website.
 * Version: 1.0
-* Author: HackerYou
+* Author: Camille van Groll
 * Author URI: http://hackeryou.com
 */
 
@@ -27,22 +27,148 @@ body {
 	color: #333;
 }
 
+header.video {
+	height: 100vh;
+	position: relative;
+}
+
+video {
+	width: 100%;
+}
+
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
 }
 
 .content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
+	width: 90%;
+	margin: 0 auto;
 }
+
+.top-nav {
+    margin-bottom: 80px;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    padding: 20px 0 10px 0;
+    z-index: 99999999999;
+}
+
+.top-nav .content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo img {
+	width: 8%;
+}
+
+.fa-bars {
+	// padding-left: 400px;
+}
+
+.title {
+	position: absolute;
+	top: 40%;
+}
+
+section.about {
+	padding: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+}
+
+.about p {
+	width: 30%;
+}
+
+
+.btn {
+	width: 100px;
+	border: 2px solid black;
+	margin-bottom: 130px;
+
+}
+
+// THIS IS THE PORTFOLIO SECTION
+
+section.portfolio {
+	
+}
+
+.wrapper {
+	width: 80%;
+	margin: 0 auto;
+}
+
+
+h2 {
+	text-align: center;
+	padding: 50px;
+}
+
+
+p.categories:before {
+	content: "";
+	display: block;
+	width: 100px;
+	border-left: 2px solid black;
+}
+
+
+
+.featured-item {
+	position: relative;
+
+}
+
+.featured-item img {
+	position: relative;
+	left: 0;
+}
+
+.featured-item:nth-child(odd) img {
+	left: 50%;
+}
+
+.portfolio-content {
+	position: absolute;
+	left: 30%;
+	top: 50%;
+	width: 30%;
+}
+
+// THIS IS THE SKILLS SECTION
+
+section.skills {
+	background: black;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	flex: 1 0 auto;
+	justify-content: center;
+
+}
+
+.skills div {
+	padding: 80px;
+}
+
+.form {
+	margin: 0 auto;
+	text-align: center;
+}
+
 
 .full {
 	width: 100%;
 }
-
-
 
 
 

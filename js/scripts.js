@@ -1,5 +1,7 @@
 $(function(){
 
-	console.log("It's working");
+	$('.fa-bars').on('click', function(){
+		$('.menu').toggleClass('open');
+	});
 
 });

@@ -1,14 +1,19 @@
+
+
 ul.menu {
-	margin: 0;
-	padding: 0;
+	display: none;
+	position: absolute;
+	right: 0;
+
 	li {
-		display: inline;
-		margin-right: 10px;
-		a {
-			color: #333;
-			padding: 10px;
-			background: #333;
-			color: white;
-		}
+		list-style: none;
 	}
+}
+
+ul.open {
+	display: inline-block;
+	 li {
+	 	text-decoration: none;
+	 }
+
 }
