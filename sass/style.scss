@@ -37,7 +37,7 @@ video {
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: 0 auto;
 }
 
@@ -76,30 +76,86 @@ video {
 	top: 40%;
 }
 
+// ABOUT SECTION
+
 section.about {
 	padding: 100px;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	flex-direction: column;
+	align-items: flex-start;
+}
 
+.skills  {
+	width: 250px;
+	height: 200px;
+	
+	
+}
+
+.skills i  {
+	margin-left: 24px;
+	@include fontSize(30);
+}
+
+.hammer {
+	position: relative;
+	top: 12px;
+}
+
+
+.skills img {
+	padding-top: 50px;
+	padding-left: 20px;
+	width: 30%;
+
+}
+
+.info {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .about p {
 	width: 30%;
+	margin: 0;
 }
 
+.about h2 {
+	text-align: left;
+	margin-left: 100px;
+}
 
-.btn {
+h2.aboutSecondTitle {
+	margin-top: 80px;
+	margin-left: 560px;
+}
+
+h2.skillsTitle {
+	margin-top: 80px;
+}
+
+.about .btn {
 	width: 100px;
+	height: 40px;
 	border: 2px solid black;
-	margin-bottom: 130px;
+	margin-left: 85px;
+	padding-left: 5px;
+	padding-top: 5px;
+
+		p {
+			width: 100%;
+			padding: 5px;
+		}
 
 }
 
 // THIS IS THE PORTFOLIO SECTION
 
 section.portfolio {
-	
+	padding-bottom: 200px;
 }
 
 .wrapper {
@@ -108,9 +164,9 @@ section.portfolio {
 }
 
 
-h2 {
+.portfolio h2 {
 	text-align: center;
-	padding: 50px;
+	@include fontSize(26);
 }
 
 
@@ -121,7 +177,20 @@ p.categories:before {
 	border-left: 2px solid black;
 }
 
+.portfolio .btn {
+	width: 100px;
+	border: 2px solid black;
+	padding-left: 5px;
+	
 
+}
+
+.portfolio-content h4 {
+	position: absolute;
+	top: -210px;
+	right: -180px;
+	transform: rotate(270deg);
+}
 
 .featured-item {
 	position: relative;
@@ -131,6 +200,19 @@ p.categories:before {
 .featured-item img {
 	position: relative;
 	left: 0;
+	width: 550px;
+	height: 400px;
+	
+}
+
+.featured-item:nth-child(2) img {
+	height: 412px;
+	width: 300px;
+}
+
+.featured-item:nth-child(3) img {
+	height: 410px;
+	width: 310px;
 }
 
 .featured-item:nth-child(odd) img {
@@ -139,35 +221,112 @@ p.categories:before {
 
 .portfolio-content {
 	position: absolute;
-	left: 30%;
-	top: 50%;
 	width: 30%;
+	left: 20%;
+	top: 40%;
 }
-
 // THIS IS THE SKILLS SECTION
 
-section.skills {
+section#skills {
 	background: black;
+}
+
+.skills-info {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
-	flex: 1 0 auto;
-	justify-content: center;
+}
+
+section#skills h3 {
+	text-align: center;
+	@include fontSize(24);
+	text-transform: uppercase;
+	margin-bottom: 65px;
+	color: white;
+}
+
+
+.fa-code {
+	padding-left: 7px;
+}
+
+.tools img {
+	background: white;
+	width: 5%;
+}
+
+.skills li, .tools li {
+	list-style: none;
+	display: inline;
+	padding: 10px;
 
 }
 
-.skills div {
-	padding: 80px;
-}
-
-.form {
-	margin: 0 auto;
+section#skills ul {
 	text-align: center;
 }
 
+section.contact {
+	padding: 100px 0;
+	display: flex;
+}
+
+.form {
+	padding-left: 85px;
+
+}
+
+input {
+	margin: 5px 0;
+	padding: 10px;
+	border: 2px solid black;
+	border-style: solid;
+	text-transform: uppercase;
+}
+
+.yourName input, .yourEmail input, .submit input {
+	width: 100%;
+}
+
+.message textarea {
+	margin: 5px 0;
+	padding: 10px;
+	border: 2px solid black;
+	border-style: solid;
+	text-transform: uppercase;
+
+}
+
+.social .fa {
+	border: 1px solid black;
+	padding: 20px 10px;
+	background: lightgrey;
+}
+
+.social .fa:hover {
+	color: white;
+ }
+
+ .contact.content {
+ 	position: relative;
+ }
+
+ .social {
+	position: absolute;
+    bottom: 125px;
+    right: 200px;
+ }
+
+input[type=submit] {
+    background: none;
+}
 
 .full {
 	width: 100%;
+}
+
+svg {
+	color: white;
 }
 
 

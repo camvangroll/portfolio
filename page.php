@@ -1,3 +1,7 @@
+/*
+  Template Name: Home
+*/
+
 <?php get_header();  ?>
 
 <div class="main">

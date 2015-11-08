@@ -1,7 +1,6 @@
-<?php show_admin_bar( false ); ?>
-
 <?php
 
+show_admin_bar( false );
 /** Tell WordPress to run theme_setup() when the 'after_setup_theme' hook is run. */
 
 if ( ! function_exists( 'theme_setup' ) ):

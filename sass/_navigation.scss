@@ -1,4 +1,8 @@
 
+.fa-bars {
+	position: relative;
+	cursor: pointer;
+}
 
 ul.menu {
 	display: none;
@@ -12,8 +16,24 @@ ul.menu {
 
 ul.open {
 	display: inline-block;
+    color: white;
+    position: absolute;
+    right: 130px;
+    top: 25px;
+
 	 li {
 	 	text-decoration: none;
+	 	display: inline;
+	 	left: 0;
+	 	padding: 0 20px;
+	 }
+
+	 a {
+	 	color: white;
 	 }
 
 }
+
+
+
+
