@@ -6,6 +6,7 @@
 * Author: Camille van Groll
 * Author URI: http://hackeryou.com
 */
+$accentcolor: #EEE2F8;
 
 @import 'normalize';
 @import 'typography';
@@ -28,7 +29,7 @@ body {
 }
 
 header.video {
-	height: 100vh;
+	// height: 100vh;
 	position: relative;
 }
 
@@ -76,6 +77,34 @@ video {
 	top: 40%;
 }
 
+.title .btn {
+	margin-top: 80px;
+	font-family: $headerfont;
+	width: 350px;
+	margin-left: 20px;
+ 	
+	p {
+		@include fontSize(30);
+		text-align: left;
+	}
+
+	a {
+		color: white;
+		transition: all 1s;
+	}
+
+	i {
+		color: white;
+		padding-right: 15px;
+	}
+}
+
+.title .btn a:hover {
+	color: $accentcolor;
+}
+
+
+
 // ABOUT SECTION
 
 section.about {
@@ -84,12 +113,13 @@ section.about {
 	flex-wrap: wrap;
 	flex-direction: column;
 	align-items: flex-start;
+	margin: 0 auto;
 }
 
 .skills  {
 	width: 250px;
-	height: 200px;
-	
+	padding: 5px 0;
+	margin-left: -25px;
 	
 }
 
@@ -105,36 +135,41 @@ section.about {
 
 
 .skills img {
-	padding-top: 50px;
 	padding-left: 20px;
-	width: 30%;
+	width: 25%;
+
 
 }
 
 .info {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
+	padding-left: 100px;
+	padding-top: 20px;
 }
 
-.about p {
-	width: 30%;
-	margin: 0;
-}
-
-.about h2 {
-	text-align: left;
+div.headshot {
 	margin-left: 100px;
 }
 
-h2.aboutSecondTitle {
-	margin-top: 80px;
-	margin-left: 560px;
+.about p {
+	width: 45%;
+	margin: 0;
 }
 
-h2.skillsTitle {
-	margin-top: 80px;
+h2.about-title {
+	text-align: left;
+	margin-left: 100px;
+	margin-bottom: 0;
+	border-bottom: 4px solid #EEE2F8;
+	width: 30%;
+}
+
+.about h2 {
+	border-bottom: 4px solid #EEE2F8;
+	width: 22%;
+	margin-bottom: 0;
+	padding: 5px 0;
 }
 
 .about .btn {
@@ -154,15 +189,10 @@ h2.skillsTitle {
 
 // THIS IS THE PORTFOLIO SECTION
 
-section.portfolio {
-	padding-bottom: 200px;
-}
-
 .wrapper {
 	width: 80%;
 	margin: 0 auto;
 }
-
 
 .portfolio h2 {
 	text-align: center;
@@ -181,20 +211,23 @@ p.categories:before {
 	width: 100px;
 	border: 2px solid black;
 	padding-left: 5px;
+	transition: all .5s;
 	
-
 }
 
-.portfolio-content h4 {
-	position: absolute;
-	top: -210px;
-	right: -180px;
-	transform: rotate(270deg);
+.portfolio .btn:hover {	
+	background: $accentcolor;
 }
 
 .featured-item {
 	position: relative;
+}
 
+.featured-item span {
+	padding: 5px 10px;
+    border: 2px solid black;
+    margin: 8px;
+    background: #EEE2F8;
 }
 
 .featured-item img {
@@ -221,60 +254,64 @@ p.categories:before {
 
 .portfolio-content {
 	position: absolute;
-	width: 30%;
+	width: 40%;
 	left: 20%;
-	top: 40%;
+	top: 20%;
 }
+
+.portfolio-content p {
+	width: 80%;
+}
+
+.portfolio-content .btn p {
+	width: 100%;
+}
+
+.featured-item:nth-child(2) .portfolio-content {
+	left: 32%;
+}
+
+.featured-item:nth-child(4) .portfolio-content {
+	left: 55%;
+}
+
 // THIS IS THE SKILLS SECTION
 
-section#skills {
-	background: black;
-}
-
-.skills-info {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-}
-
-section#skills h3 {
-	text-align: center;
-	@include fontSize(24);
-	text-transform: uppercase;
-	margin-bottom: 65px;
-	color: white;
-}
-
-
-.fa-code {
-	padding-left: 7px;
-}
-
-.tools img {
-	background: white;
-	width: 5%;
-}
-
-.skills li, .tools li {
-	list-style: none;
-	display: inline;
-	padding: 10px;
-
-}
-
-section#skills ul {
-	text-align: center;
-}
 
 section.contact {
 	padding: 100px 0;
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
-.form {
-	padding-left: 85px;
+.social {
+	padding-top: 55px;
+	margin-right: 200px;
+}
+
+.social h3 {
+	@include fontSize(18);
+	text-transform: uppercase;
+	padding-top: 20px;
+	margin: 0;
 
 }
+
+.social img {
+ 	width: 30px;
+ 	position: relative;
+ 	right: 10px;
+ 	top: 7px;
+ }
+
+ .social p {
+ 	@include fontSize(16);
+ 	padding-left: 5px;
+ 	margin-top: 5px;
+ }
+
+
 
 input {
 	margin: 5px 0;
@@ -298,23 +335,15 @@ input {
 }
 
 .social .fa {
-	border: 1px solid black;
-	padding: 20px 10px;
-	background: lightgrey;
+	padding: 5px 15px 20px 0;
+	margin-right: 5px;
+	position: relative;
+	left: -7px;
+	
 }
 
 .social .fa:hover {
 	color: white;
- }
-
- .contact.content {
- 	position: relative;
- }
-
- .social {
-	position: absolute;
-    bottom: 125px;
-    right: 200px;
  }
 
 input[type=submit] {
