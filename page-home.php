@@ -50,45 +50,56 @@
     </div><!-- innerWrapper -->
   </header><!--/.header-->
 
-  <section class="about content" id="about">  
-          <h2 class="about-title">About Me</h2>  
-            <div class="info">
-              <p>I'm from Toronto, where I live in the West end. I love working in team environments 
-                 and being inspired by the work that's being created around me. I have a background in 
-                 the service industry (Grand Electric, Terroni), and resultantly a strong ability to 
-                 communicate, problem solve under pressure, and work client side. I enjoy working in fast-paced environments
-                  and always maintain a positive attitude.</p>
-                <div class="headshot">
-                  <?php the_post_thumbnail(array(250,300)); ?>
-                </div>
-            <!--  </div>
+  <section class="about content" id="about"> 
 
-             <div class="info"> -->
-               <div>
-                  <h2>How I work</h2>
+         <div class="about-me">
+              <div class="about-me-text">
+                  <h2 class="about-title">About Me</h2>        
+                  <p>I'm from Toronto, where I live in the West end. I love working in team environments 
+                     and being inspired by the work that's being created around me. I have a background in 
+                     the service industry (Grand Electric, Terroni), and resultantly a strong ability to 
+                     communicate, problem solve under pressure, and work client side. I enjoy working in fast-paced environments
+                      and always maintain a positive attitude.</p>
+              </div>
+                  <div class="headshot">
+                    <?php the_post_thumbnail(array(250,300)); ?>
+                  </div>
+          </div>
+
+             <div class="info">
+               <div class="box">
+                  <h2>Background</h2>
                   <div class="skills"> 
                      <img src=" <?php bloginfo('template_url') ?>/images/noun_168220_cc.jpg" alt="brain stem"> 
                      <img src=" <?php bloginfo('template_url') ?>/images/noun_190283_cc.jpg" alt="chess piece"> 
                      <img src=" <?php bloginfo('template_url') ?>/images/noun_104502_cc.jpg" alt="chess piece"> 
                   </div>   
-                   <p> I have a strong work ethic, and can apply to both critical thinking and creativity to a project. I have a BA in Psychology and enjoy applying those concepts to
-                      my work as a developer. When I start a new project I always begin with strategy before breaking down the technical aspects. I like thinking about how a user will interact with a site, 
-                      and what the goal is that I'm trying to communicate. 
+                   <p>I have a BA in Psychology and enjoy applying those concepts to my work as a developer. When I start a new project I always begin with strategy before breaking down the technical aspects. I can think both analytically and creativily.   
                   </p> 
                 </div>
 
-                <div>
+                <div class="box">
                  <h2>Skills</h2>
-                   <div class="skills">           
-                     <i class="fa fa-code"></i>
-                     <img  class="hammer" src=" <?php bloginfo('template_url') ?>/images/noun_168_cc.jpg" alt="hammer"> 
-                     <i class="devicon-git-plain"></i>         
+                   <div class="skills">  
+                      <i class="devicon-javascript-plain"></i>         
+                      <i class="fa fa-code"></i>  
+                      <i class="devicon-wordpress-plain"></i>       
                   </div> 
                    <p>I have an in depth understanding of HTML5 and CSS3, and experience working with JQuery, 
-                    Javascript, Ajax Api's, WordPress and PHP. I'm also comfortable using Git and GitHub, the Command Line, 
-                    Gulp and Sass. Check out some of my work below.
+                    Javascript, Ajax Api's, WordPress and PHP.  
                   </p>
               </div>
+              
+              <div class="box">
+                <h2>Tools</h2>
+                  <div class="tools">
+                    <img src=" <?php bloginfo('template_url') ?>/images/terminal.png" alt="terminal">
+                    <i class="devicon-sass-original"></i> 
+                    <i class="devicon-git-plain"></i>                                    
+                 </div>
+                 <p>I've comfortable using a number of tools to aid my workflow. I'm experienced with Git and GitHub, the Command Line, installing and using Gulp and SASS. </p>
+              </div>
+            </div>
   </section>
   
 
@@ -143,7 +154,11 @@
     <?php endif; ?>
 
     </section>
-    <section class="contact content" id="contact">
+
+
+    <section class="contact" id="contact">
+
+  <div class="content contact-layout">
    
        <div class="form">
           <h2>Drop me a line</h2>
@@ -153,29 +168,26 @@
        <div class="social">
          <h3>Find Me here</h3>
            <p>
-             <img src=" <?php bloginfo('template_url') ?>/images/noun_119359_cc.jpg" alt="">
-              220 Gladstone Ave.
+           <i class="fa fa-map-marker fa-2x"></i>
+              Dundas and Gladstone Ave.
               Toronto, ON.
           </p>
         <h3>Contact</h3>
           <p>
-            <img src=" <?php bloginfo('template_url')?>/images/noun_106122_cc.jpg " alt="envelope">
+          <i class="fa fa-envelope-o fa-2x"></i>
             hello@camillevangroll.com
           </p>
           <p>
-           <img src=" <?php bloginfo('template_url')?>/images/noun_70720_cc.jpg " alt="phone">
+          <i class="fa fa-phone fa-2x"></i>
            647 400 9902 
           </p>
-        <h3>Connect</h3>
-        <p>
-          <i class="fa fa-twitter"></i>
-          <i class="fa fa-linkedin"></i>
-          <i class="fa fa-instagram"></i>
-          <i class="fa fa-github"></i>
-        </p>
       </div>
 
+    </div>
+
     </section>
+
+
 
     </div> <!--content -->
     

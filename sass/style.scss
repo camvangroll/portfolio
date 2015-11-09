@@ -108,66 +108,80 @@ video {
 // ABOUT SECTION
 
 section.about {
-	padding: 100px;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	align-items: flex-start;
 	margin: 0 auto;
+	padding: 10% 0;
 }
 
-.skills  {
+.headshot {
+	padding-left: 8%;
+}
+
+.info, .about-me {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+}
+
+div.info {
+	padding-top: 10%;
+}
+
+.about-me div {
+	flex: 1 0 50%;
+}
+
+.about-me-text {
+	padding-left: 18%;
+}
+
+.box {
+	width: 33%;
+	padding-left: 8%;
+}
+
+.skills, .tools  {
 	width: 250px;
 	padding: 5px 0;
 	margin-left: -25px;
+	margin-top: 10px;
+	line-height: 2px;
 	
 }
 
-.skills i  {
-	margin-left: 24px;
-	@include fontSize(30);
+.skills i, .tools i  {
+	margin-left: 35px;
+	@include fontSize(32);
 }
-
-.hammer {
-	position: relative;
-	top: 12px;
-}
-
 
 .skills img {
 	padding-left: 20px;
 	width: 25%;
-
+	margin-left: 10px;
 
 }
 
-.info {
-	display: flex;
-	flex-wrap: wrap;
-	padding-left: 100px;
-	padding-top: 20px;
+.tools img {
+	width: 23%;
+	margin-left: 20px;
+	padding-left: 20px;
 }
 
-div.headshot {
-	margin-left: 100px;
-}
-
-.about p {
-	width: 45%;
+.info, .about-me p {
 	margin: 0;
+	padding-top: 20px;
 }
 
 h2.about-title {
 	text-align: left;
-	margin-left: 100px;
 	margin-bottom: 0;
 	border-bottom: 4px solid #EEE2F8;
-	width: 30%;
+	width: 41%;
 }
 
-.about h2 {
+.info h2 {
 	border-bottom: 4px solid #EEE2F8;
-	width: 22%;
+	width: 70%;
 	margin-bottom: 0;
 	padding: 5px 0;
 }
@@ -278,7 +292,12 @@ p.categories:before {
 // THIS IS THE SKILLS SECTION
 
 
-section.contact {
+.contact {
+	background: black;
+	color: white;
+}
+
+.contact-layout {
 	padding: 100px 0;
 	display: flex;
 	flex-wrap: wrap;
@@ -287,27 +306,27 @@ section.contact {
 
 .social {
 	padding-top: 55px;
-	margin-right: 200px;
+	font-family: $headerfont;
 }
 
 .social h3 {
 	@include fontSize(18);
 	text-transform: uppercase;
-	padding-top: 20px;
+	padding-top: 5px;
 	margin: 0;
 
 }
 
-.social img {
- 	width: 30px;
+.social i {
  	position: relative;
- 	right: 10px;
- 	top: 7px;
+ 	right: 20px;
+ 	top: 5px;
+ 	color: white;
  }
 
  .social p {
  	@include fontSize(16);
- 	padding-left: 5px;
+ 	padding-left: 20px;
  	margin-top: 5px;
  }
 
@@ -316,7 +335,7 @@ section.contact {
 input {
 	margin: 5px 0;
 	padding: 10px;
-	border: 2px solid black;
+	border: 2px solid white;
 	border-style: solid;
 	text-transform: uppercase;
 }
@@ -328,26 +347,30 @@ input {
 .message textarea {
 	margin: 5px 0;
 	padding: 10px;
-	border: 2px solid black;
+	border: 2px solid white;
 	border-style: solid;
 	text-transform: uppercase;
 
 }
 
-.social .fa {
+footer .fa {
 	padding: 5px 15px 20px 0;
 	margin-right: 5px;
 	position: relative;
 	left: -7px;
+	color: white;
 	
 }
 
-.social .fa:hover {
-	color: white;
+footer .fa:hover {
+	color: $accentcolor;
+	cursor: pointer;
  }
 
 input[type=submit] {
     background: none;
+    border: 2px solid white;
+    color: white;
 }
 
 .full {
@@ -356,6 +379,77 @@ input[type=submit] {
 
 svg {
 	color: white;
+}
+
+@media (max-width: 480px) {
+	header video {
+		width: 260%;
+	}
+
+	.logo {
+		width: 95%;
+	}
+
+	.title {
+		top: 25%;
+	}
+
+	.about-me, .info {
+		flex-direction: column;
+	}
+
+	.headshot {
+		padding-left: 25%;
+		padding-top: 10%;
+	}
+
+	h2.about-title {
+		width: 100%;
+
+	}
+
+	.box {
+		width: 100%;
+	}
+
+	.info h2 {
+		width: 95%;
+		text-align: center;
+	}
+
+	.skills, .tools {
+		margin-left: 61px;
+	}
+
+	.box p {
+		text-align: center;
+	}
+
+	.portfolio-content {
+		width: 100%;
+	}
+
+	footer p {
+		text-align: center;
+	}
+
+	.contact h3 {
+		text-align: center;
+	}
+
+	.form h2 {
+		text-align: center;
+	}
+
+	.social p {
+		text-align: center;
+		padding-left: 20px;
+	}
+
+	footer .fa {
+		left: 35px;
+	}
+
 }
 
 

@@ -1,6 +1,12 @@
 <footer>
   <div>
-    <p>&copy; Camille van Groll <?php echo date('Y'); ?></p>
+ 	 <p>
+         <a href="https://twitter.com/camvangroll"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/camille-van-groll-47a06485"><i class="fa fa-linkedin"></i></a>
+          <a href="https://instagram.com/camvangroll/"><i class="fa fa-instagram"></i></a>
+          <a href="https://github.com/camvangroll"><i class="fa fa-github"></i></a>
+      </p> 
+   <!--  <p>&copy; Camille van Groll <?php echo date('Y'); ?></p> -->
   </div>
 </footer>
 
