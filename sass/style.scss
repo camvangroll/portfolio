@@ -38,7 +38,7 @@ video {
 }
 
 .container {
-	max-width: 1400px;
+	max-width: 1800px;
 	margin: 0 auto;
 }
 
@@ -49,7 +49,7 @@ video {
 
 .top-nav {
     margin-bottom: 80px;
-    position: fixed;
+    position: relative;
     top: 0%;
     width: 100%;
     background: rgba(0,0,0,0.9);
@@ -89,12 +89,12 @@ video {
 	}
 
 	a {
-		color: white;
+		color: $accentcolor;
 		transition: all 1s;
 	}
 
 	i {
-		color: white;
+		color: $accentcolor;
 		padding-right: 15px;
 	}
 }
@@ -113,7 +113,7 @@ section.about {
 }
 
 .headshot {
-	padding-left: 8%;
+	padding-left: 18%;
 }
 
 .info, .about-me {
@@ -132,12 +132,15 @@ div.info {
 }
 
 .about-me-text {
-	padding-left: 18%;
+	padding-left: 7%;
 }
 
 .box {
-	width: 33%;
-	padding-left: 8%;
+	width: 25%;
+	padding-left: 0;
+	margin: 35px;
+	border: 1px solid $accentcolor;
+	padding: 20px 35px;
 }
 
 .skills, .tools  {
@@ -151,7 +154,7 @@ div.info {
 
 .skills i, .tools i  {
 	margin-left: 35px;
-	@include fontSize(32);
+	@include fontSize(30);
 }
 
 .skills img {
@@ -162,28 +165,31 @@ div.info {
 }
 
 .tools img {
-	width: 23%;
+	width: 21%;
 	margin-left: 20px;
 	padding-left: 20px;
 }
+
 
 .info, .about-me p {
 	margin: 0;
 	padding-top: 20px;
 }
 
+.info p {
+	text-align: center;
+}
+
 h2.about-title {
 	text-align: left;
 	margin-bottom: 0;
-	border-bottom: 4px solid #EEE2F8;
-	width: 41%;
 }
 
 .info h2 {
-	border-bottom: 4px solid #EEE2F8;
-	width: 70%;
+	width: 90%;
 	margin-bottom: 0;
 	padding: 5px 0;
+	text-align: center;
 }
 
 .about .btn {
@@ -202,6 +208,10 @@ h2.about-title {
 }
 
 // THIS IS THE PORTFOLIO SECTION
+
+section.portfolio {
+	padding-bottom: 15%;
+}
 
 .wrapper {
 	width: 80%;
@@ -226,55 +236,51 @@ p.categories:before {
 	border: 2px solid black;
 	padding-left: 5px;
 	transition: all .5s;
+	background: $accentcolor;
 	
 }
 
+.portfolio-content a {
+	color: black;
+}
+
 .portfolio .btn:hover {	
-	background: $accentcolor;
+	background: white;
 }
 
 .featured-item {
 	position: relative;
+	padding: 5% 0;
 }
 
 .featured-item span {
 	padding: 5px 10px;
     border: 2px solid black;
     margin: 8px;
-    background: #EEE2F8;
+    // background: #EEE2F8;
 }
 
 .featured-item img {
 	position: relative;
-	left: 0;
-	width: 550px;
-	height: 400px;
+	left: -50px;
+	width: 60%;
 	
 }
 
-.featured-item:nth-child(2) img {
-	height: 412px;
-	width: 300px;
-}
-
-.featured-item:nth-child(3) img {
-	height: 410px;
-	width: 310px;
-}
-
 .featured-item:nth-child(odd) img {
-	left: 50%;
+	left: 45%;
 }
 
 .portfolio-content {
 	position: absolute;
-	width: 40%;
-	left: 20%;
+	width: 50%;
+	left: 0;
 	top: 20%;
 }
 
 .portfolio-content p {
 	width: 80%;
+	font-weight: bold;
 }
 
 .portfolio-content .btn p {
@@ -282,11 +288,11 @@ p.categories:before {
 }
 
 .featured-item:nth-child(2) .portfolio-content {
-	left: 32%;
+	left: 60%;
 }
 
 .featured-item:nth-child(4) .portfolio-content {
-	left: 55%;
+	left: 60%;
 }
 
 // THIS IS THE SKILLS SECTION
@@ -304,29 +310,39 @@ p.categories:before {
 	justify-content: space-around;
 }
 
+.form {
+		width: 40%;
+	}
+
 .social {
-	padding-top: 55px;
+	padding-top: 70px;
 	font-family: $headerfont;
+	margin-right: 70px;
 }
 
 .social h3 {
 	@include fontSize(18);
 	text-transform: uppercase;
-	padding-top: 5px;
+	padding-bottom: 15px;
 	margin: 0;
 
 }
 
-.social i {
- 	position: relative;
- 	right: 20px;
- 	top: 5px;
- 	color: white;
- }
+// .social i {
+//  	position: relative;
+//  	right: 20px;
+//  	top: 5px;
+//  	color: white;
+//  }
+
+.social a {
+	text-decoration: none;
+	color: white;
+}
 
  .social p {
  	@include fontSize(16);
- 	padding-left: 20px;
+ 	// padding-left: 20px;
  	margin-top: 5px;
  }
 
@@ -349,20 +365,26 @@ input {
 	padding: 10px;
 	border: 2px solid white;
 	border-style: solid;
+	width: 100%;
 	text-transform: uppercase;
 
 }
 
-footer .fa {
+.social div {
+	padding-left: 8px;
+}
+
+.social .fa {
 	padding: 5px 15px 20px 0;
 	margin-right: 5px;
 	position: relative;
 	left: -7px;
 	color: white;
+	@include fontSize(20);
 	
 }
 
-footer .fa:hover {
+.social .fa:hover {
 	color: $accentcolor;
 	cursor: pointer;
  }
@@ -381,6 +403,30 @@ svg {
 	color: white;
 }
 
+@media (max-width: 940px) {
+
+	.box {
+		width: 34%;
+	}
+}
+
+@media (max-width: 768px) {
+
+	video {
+		width: 130%;
+	}
+
+	ul.menu li {
+		@include fontSize(20);
+		padding: 0 20px;
+	}
+
+	.box {
+		width: 39%;
+	}
+}
+
+
 @media (max-width: 480px) {
 	header video {
 		width: 260%;
@@ -390,21 +436,35 @@ svg {
 		width: 95%;
 	}
 
+	.dropDownNav {
+		top: -400%;
+	}
+
+	.dropDownNav.open {
+		top: 45%;
+	}
+
+	ul.menu li {
+		padding: 40px 50px;
+	}
+
 	.title {
 		top: 25%;
 	}
 
 	.about-me, .info {
 		flex-direction: column;
+		align-items: center;
 	}
 
 	.headshot {
-		padding-left: 25%;
+		padding-left: 0;
 		padding-top: 10%;
 	}
 
 	h2.about-title {
 		width: 100%;
+		text-align: center;
 
 	}
 
@@ -425,8 +485,24 @@ svg {
 		text-align: center;
 	}
 
+	// portfolio section
+
+	.featured-item, .portfolio-content {
+		position: static;
+	}
+
+	.featured-item img {
+		position: static;
+		width: 100%;
+	}
+
 	.portfolio-content {
 		width: 100%;
+		padding-left: 15%;
+	}
+
+	.form {
+		width: 80%;
 	}
 
 	footer p {
@@ -441,14 +517,23 @@ svg {
 		text-align: center;
 	}
 
+	.social {
+		margin-right: 0;
+	}
+
 	.social p {
 		text-align: center;
 		padding-left: 20px;
 	}
 
-	footer .fa {
-		left: 35px;
+	.social .fa {
+		left: 30px;
 	}
+
+	footer p {
+		padding-right: 0;
+	}
+
 
 }
 

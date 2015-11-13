@@ -20,28 +20,30 @@
       </video>
 
         
-     <nav class="top-nav">
+   <div class="navContainer">
+       <nav class="top-nav">
         <div class="content">
-        <div class="logo">
-          <img src=" <?php bloginfo('template_url') ?>/images/camille-whitelogo.png" alt="Camille van Groll">
-        </div>
-       
-       <nav class="hamburgerMenu">
-          <div class="fa fa-bars fa-2x"></div>
-            <div>
+          <div class="logo">
+            <img src=" <?php bloginfo('template_url') ?>/images/camille-whitelogo.png" alt="Camille van Groll">
+          </div>
+            <nav class="hamburgerMenu">
+            <i class="fa fa-bars fa-2x"></i>        
+           </nav>
+       </div>
+     </nav>
+     
+      <div class="dropDownNav">
              <?php wp_nav_menu( array(
               'container' => false,
               'theme_location' => 'primary'
                )); ?>
-            </div>
-       </nav>
        </div>
-     </nav>
+   </div>
 
     <div class="content">
        <div class="title">
          <h1>Hi, I'm Camille and I'm a Front-End Developer.</h1>
-         <div class="btn">
+         <div class="btn"> <!-- animated pulse infinite -->
         <p><i class="fa fa-long-arrow-right fa-3"></i><a href="#portfolio">View Work</a></p>
       </div>
        </div>
@@ -55,11 +57,7 @@
          <div class="about-me">
               <div class="about-me-text">
                   <h2 class="about-title">About Me</h2>        
-                  <p>I'm from Toronto, where I live in the West end. I love working in team environments 
-                     and being inspired by the work that's being created around me. I have a background in 
-                     the service industry (Grand Electric, Terroni), and resultantly a strong ability to 
-                     communicate, problem solve under pressure, and work client side. I enjoy working in fast-paced environments
-                      and always maintain a positive attitude.</p>
+                  <p>I'm a front-end developer from Toronto. I love working in team environments and being inspired by the work that's being created around me. Before becoming a developer, I interned at a start-up app and in the advertising industry, while working in restaurants at the same time. As a result, I developed strong communication and problem solving skills,  as well as a talent for working with clients. I like working in fast-paced environments and always maintain a positive attitude.</p>
               </div>
                   <div class="headshot">
                     <?php the_post_thumbnail(array(250,300)); ?>
@@ -74,7 +72,7 @@
                      <img src=" <?php bloginfo('template_url') ?>/images/noun_190283_cc.jpg" alt="chess piece"> 
                      <img src=" <?php bloginfo('template_url') ?>/images/noun_104502_cc.jpg" alt="chess piece"> 
                   </div>   
-                   <p>I have a BA in Psychology and enjoy applying those concepts to my work as a developer. When I start a new project I always begin with strategy before breaking down the technical aspects. I can think both analytically and creativily.   
+                   <p>I have a BA in Psychology and enjoy applying those concepts to my work as a developer. When I start a new project I always begin with strategy before breaking down the technical aspects. 
                   </p> 
                 </div>
 
@@ -85,8 +83,7 @@
                       <i class="fa fa-code"></i>  
                       <i class="devicon-wordpress-plain"></i>       
                   </div> 
-                   <p>I have an in depth understanding of HTML5 and CSS3, and experience working with JQuery, 
-                    Javascript, Ajax Api's, WordPress and PHP.  
+                   <p>I have an in-depth understanding of HTML5 and CSS3, and experience working with jQuery, JavaScript, APIs, WordPress and PHP. I'm constantly learning and expanding my skillset.
                   </p>
               </div>
               
@@ -97,7 +94,7 @@
                     <i class="devicon-sass-original"></i> 
                     <i class="devicon-git-plain"></i>                                    
                  </div>
-                 <p>I've comfortable using a number of tools to aid my workflow. I'm experienced with Git and GitHub, the Command Line, installing and using Gulp and SASS. </p>
+                 <p>I've comfortable using a number of tools, such as Git and GitHub, the Command Line, Gulp and Sass. I enjoy working efficiently and integrating new technology into my workflow. </p>
               </div>
             </div>
   </section>
@@ -166,21 +163,17 @@
        </div>
 
        <div class="social">
-         <h3>Find Me here</h3>
-           <p>
-           <i class="fa fa-map-marker fa-2x"></i>
-              Dundas and Gladstone Ave.
-              Toronto, ON.
-          </p>
         <h3>Contact</h3>
           <p>
-          <i class="fa fa-envelope-o fa-2x"></i>
-            hello@camillevangroll.com
+          <!-- <i class="fa fa-envelope-o fa-2x"></i> -->
+          <a href="mailto:hello@camillevangroll.com" target="_top"> hello@camillevangroll.com </a>
           </p>
-          <p>
-          <i class="fa fa-phone fa-2x"></i>
-           647 400 9902 
-          </p>
+          <div>
+          <a href="https://twitter.com/camvangroll" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/camille-van-groll-47a06485" target="_blank"><i class="fa fa-linkedin"></i></a>
+          <a href="https://instagram.com/camvangroll/"><i class="fa fa-instagram" target="_blank"></i></a>
+          <a href="https://github.com/camvangroll"><i class="fa fa-github" target="_blank"></i></a>
+         </div> 
       </div>
 
     </div>

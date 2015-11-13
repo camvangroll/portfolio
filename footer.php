@@ -1,12 +1,12 @@
 <footer>
   <div>
- 	 <p>
-         <a href="https://twitter.com/camvangroll"><i class="fa fa-twitter"></i></a>
-          <a href="https://www.linkedin.com/in/camille-van-groll-47a06485"><i class="fa fa-linkedin"></i></a>
-          <a href="https://instagram.com/camvangroll/"><i class="fa fa-instagram"></i></a>
-          <a href="https://github.com/camvangroll"><i class="fa fa-github"></i></a>
-      </p> 
-   <!--  <p>&copy; Camille van Groll <?php echo date('Y'); ?></p> -->
+ 	<!--  <p>
+         <a href="https://twitter.com/camvangroll" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+          <a href="https://www.linkedin.com/in/camille-van-groll-47a06485" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
+          <a href="https://instagram.com/camvangroll/"><i class="fa fa-instagram fa-2x" target="_blank"></i></a>
+          <a href="https://github.com/camvangroll"><i class="fa fa-github fa-2x" target="_blank"></i></a>
+      </p>  -->
+    <p>&copy; Camille van Groll <?php echo date('Y'); ?></p>
   </div>
 </footer>
 

@@ -4,35 +4,56 @@
 	cursor: pointer;
 }
 
-ul.menu {
-	display: none;
+.fa-times {
+	cursor: pointer;
+}
+
+
+.navContainer {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 99999999;
+
+		i {
+			color: white;
+		}
+}	
+
+
+.dropDownNav {
 	position: absolute;
-	right: 0;
+	z-index: 5;
+	top: 0;
+	width: 100%;
+	background: black;
+	transition: all 1s;
+}
+
+.dropDownNav.open {
+	top: 82px;
+}
+
+
+ul.menu {
+
+	margin-left: 50px;
 
 	li {
 		list-style: none;
+		display: inline-block;
+		color: white;
+		@include fontSize(32);
+		text-transform: uppercase;
+		padding: 0 50px;
+	}
+
+	a {
+		color: white;
 	}
 }
 
-ul.open {
-	display: inline-block;
-    color: white;
-    position: absolute;
-    right: 130px;
-    top: 25px;
 
-	 li {
-	 	text-decoration: none;
-	 	display: inline;
-	 	left: 0;
-	 	padding: 0 20px;
-	 }
-
-	 a {
-	 	color: white;
-	 }
-
-}
 
 
 
