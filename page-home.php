@@ -40,7 +40,7 @@
        </div>
    </div>
 
-    <div class="content">
+    <div class="content" id="home">
        <div class="title">
          <h1>Hi, I'm Camille and I'm a Front-End Developer.</h1>
          <div class="btn"> <!-- animated pulse infinite -->
@@ -57,7 +57,7 @@
          <div class="about-me">
               <div class="about-me-text">
                   <h2 class="about-title">About Me</h2>        
-                  <p>I'm a front-end developer from Toronto. I love working in team environments and being inspired by the work that's being created around me. Before becoming a developer, I interned at a start-up app and in the advertising industry, while working in restaurants at the same time. As a result, I developed strong communication and problem solving skills,  as well as a talent for working with clients. I like working in fast-paced environments and always maintain a positive attitude.</p>
+                  <p>Hi, I'm Camille, a front-end developer based in Toronto. I love working in team environments and being inspired by the work being created around me. Before becoming a developer, I interned in tech and advertising, and working in the restaurant industry. As a result, I developed strong communication and problem solving skills,  as well as a talent for working with clients. I like working in fast-paced environments and always maintain a positive attitude. View my <a href="images/resume.pdf">Resume Here.</a></p>
               </div>
                   <div class="headshot">
                     <?php the_post_thumbnail(array(250,300)); ?>
@@ -67,7 +67,7 @@
              <div class="info">
                <div class="box">
                   <h2>Background</h2>
-                  <div class="skills"> 
+                  <div class="skills" id="skills"> 
                      <img src=" <?php bloginfo('template_url') ?>/images/noun_168220_cc.jpg" alt="brain stem"> 
                      <img src=" <?php bloginfo('template_url') ?>/images/noun_190283_cc.jpg" alt="chess piece"> 
                      <img src=" <?php bloginfo('template_url') ?>/images/noun_104502_cc.jpg" alt="chess piece"> 
@@ -83,7 +83,7 @@
                       <i class="fa fa-code"></i>  
                       <i class="devicon-wordpress-plain"></i>       
                   </div> 
-                   <p>I have an in-depth understanding of HTML5 and CSS3, and experience working with jQuery, JavaScript, APIs, WordPress and PHP. I'm constantly learning and expanding my skillset.
+                   <p>I have an in-depth understanding of HTML5 and CSS3, and experience working with jQuery, JavaScript, APIs, WordPress and PHP. I'm constantly learning and expanding my skills.
                   </p>
               </div>
               
@@ -94,7 +94,7 @@
                     <i class="devicon-sass-original"></i> 
                     <i class="devicon-git-plain"></i>                                    
                  </div>
-                 <p>I've comfortable using a number of tools, such as Git and GitHub, the Command Line, Gulp and Sass. I enjoy working efficiently and integrating new technology into my workflow. </p>
+                 <p>I've comfortable using a number of tools, such as Git and GitHub, the Command Line, Gulp and Sass. I enjoy working efficiently and integrating new technology into my workflow.</p>
               </div>
             </div>
   </section>

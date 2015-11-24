@@ -43,7 +43,7 @@ video {
 }
 
 .content {
-	width: 90%;
+	max-width: 90%;
 	margin: 0 auto;
 }
 
@@ -75,12 +75,14 @@ video {
 .title {
 	position: absolute;
 	top: 40%;
+	left: 0;
+	padding-left: 5%;
 }
 
 .title .btn {
 	margin-top: 80px;
 	font-family: $headerfont;
-	width: 350px;
+	max-width: 350px;
 	margin-left: 20px;
  	
 	p {
@@ -119,6 +121,8 @@ section.about {
 .info, .about-me {
 	display: flex;
 	flex-wrap: wrap;
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
 	flex-direction: row;
 	justify-content: center;
 }
@@ -144,6 +148,7 @@ div.info {
 }
 
 .skills, .tools  {
+	display: none;
 	width: 250px;
 	padding: 5px 0;
 	margin-left: -25px;
@@ -186,7 +191,6 @@ h2.about-title {
 }
 
 .info h2 {
-	width: 90%;
 	margin-bottom: 0;
 	padding: 5px 0;
 	text-align: center;
@@ -257,7 +261,6 @@ p.categories:before {
 	padding: 5px 10px;
     border: 2px solid black;
     margin: 8px;
-    // background: #EEE2F8;
 }
 
 .featured-item img {
@@ -267,6 +270,10 @@ p.categories:before {
 	
 }
 
+.featured-item:nth-child(2) img {
+	left: -10%;
+}
+
 .featured-item:nth-child(odd) img {
 	left: 45%;
 }
@@ -274,7 +281,7 @@ p.categories:before {
 .portfolio-content {
 	position: absolute;
 	width: 50%;
-	left: 0;
+	left: 3%;
 	top: 20%;
 }
 
@@ -327,13 +334,6 @@ p.categories:before {
 	margin: 0;
 
 }
-
-// .social i {
-//  	position: relative;
-//  	right: 20px;
-//  	top: 5px;
-//  	color: white;
-//  }
 
 .social a {
 	text-decoration: none;
@@ -405,56 +405,167 @@ svg {
 
 @media (max-width: 940px) {
 
+	.content {
+		margin: 0 auto;
+	}
+
 	.box {
 		width: 34%;
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 705px) {
 
-	video {
-		width: 130%;
-	}
-
-	ul.menu li {
-		@include fontSize(20);
-		padding: 0 20px;
-	}
-
-	.box {
-		width: 39%;
-	}
-}
-
-
-@media (max-width: 480px) {
 	header video {
-		width: 260%;
+		display: none;
+	}
+
+	header {
+		background: black;
+		height: 100vh;
 	}
 
 	.logo {
 		width: 95%;
 	}
 
-	.dropDownNav {
-		top: -400%;
+	.title {
+		top: 35%;
 	}
 
-	.dropDownNav.open {
-		top: 45%;
+	.title .btn {
+		margin-top: 40px;
 	}
 
-	ul.menu li {
-		padding: 40px 50px;
+	.headshot {
+		padding-left: 10%;
+	}
+
+	h2.about-title {
+		margin: 0;
+	}
+
+	.about-me-text {
+		padding-left: 0;
+	}
+
+	.box {
+		width: 75%;
+	}
+
+	// portfolio section
+
+	.featured-item:nth-child(1) img {
+    margin-bottom: 10%;
+	}
+	.featured-item:nth-child(2) img {
+    margin: 5% 0 12% 0;
+	}	
+	.featured-item:nth-child(4) img {
+    margin-bottom: 10%;
+	}
+
+	.featured-item, .portfolio-content {
+		position: static;
+	}
+
+	.featured-item img {
+		position: static;
+		width: 100%;
+	}
+
+	.portfolio-content {
+		width: 100%;
+		padding-left: 0;
+		text-align: center;
+
+		h3, h4, p {
+				text-align: center;
+			}
+
+			p {
+				width: 100%;
+			}
+	}
+
+	.featured-item span {
+		display: block;
+		width: 50%;
+		margin: 5% auto;
+	}
+
+
+	.portfolio .btn {
+		margin: 0 auto;
+		width: 200px;
+	}
+
+
+	.form {
+		width: 100%;
+	}
+
+	footer p {
+		text-align: center;
+	}
+
+	.contact h3 {
+		text-align: center;
+	}
+
+	.form h2 {
+		text-align: center;
+		@include fontSize(20)
+	}
+
+	.social {
+		margin-right: 0;
+	}
+
+	.social p {
+		text-align: center;
+		padding-left: 20px;
+	}
+
+	.social .fa {
+		left: 30px;
+	}
+
+	footer p {
+		padding-right: 0;
+	}
+
+}
+
+@media (max-width: 600px) {
+
+	h1 {
+		@include fontSize(35);
 	}
 
 	.title {
-		top: 25%;
+		top: 30%;
+	}
+
+	.title .btn {
+		margin-top: 50px;
+		margin-left: 0;
+	}
+
+	.title .btn p {
+		@include fontSize(25);
 	}
 
 	.about-me, .info {
-		flex-direction: column;
-		align-items: center;
+		display: block;
+	}
+
+	.box {
+		margin: 5% 0;
+	}
+
+	.about-me p {
+		text-align: center;
 	}
 
 	.headshot {
@@ -473,7 +584,6 @@ svg {
 	}
 
 	.info h2 {
-		width: 95%;
 		text-align: center;
 	}
 
@@ -495,45 +605,7 @@ svg {
 		position: static;
 		width: 100%;
 	}
-
-	.portfolio-content {
-		width: 100%;
-		padding-left: 15%;
-	}
-
-	.form {
-		width: 80%;
-	}
-
-	footer p {
-		text-align: center;
-	}
-
-	.contact h3 {
-		text-align: center;
-	}
-
-	.form h2 {
-		text-align: center;
-	}
-
-	.social {
-		margin-right: 0;
-	}
-
-	.social p {
-		text-align: center;
-		padding-left: 20px;
-	}
-
-	.social .fa {
-		left: 30px;
-	}
-
-	footer p {
-		padding-right: 0;
-	}
-
+	
 
 }
 

@@ -36,8 +36,7 @@
 
 
 ul.menu {
-
-	margin-left: 50px;
+	margin-left: 5%;
 
 	li {
 		list-style: none;
@@ -52,6 +51,79 @@ ul.menu {
 		color: white;
 	}
 }
+
+@media (max-width: 1045px) {
+
+	ul.menu {
+		margin-left: 8%;
+	}
+
+	ul.menu li {
+		@include fontSize(32);
+		padding: 0 20px;
+		}
+	
+}
+
+@media (max-width: 895px) {
+
+	ul.menu li {
+		@include fontSize(28);
+		padding: 0 10px;
+	}
+}
+
+@media (max-width: 730px) {
+	ul.menu li {
+		@include fontSize(20);
+		margin-left: 2%;
+	}
+}
+
+@media (max-width: 660px) {
+	div.logo {
+	width: 90%;
+}
+
+	ul.menu li {
+		@include fontSize(18);
+	}
+
+}
+
+@media (max-width: 580px) {
+
+	.dropDownNav {
+		top: -410%;
+	}
+
+	.dropDownNav.open {
+		top: 40%;
+		height: 100vh;
+	}
+
+	ul.menu {
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	ul.menu li {
+		padding: 20px 50px;
+		@include fontSize(32);
+		display: block;
+		text-align: center;
+		margin-left: 0;
+	}
+
+
+	}
+
+
+
+
+
+
+
 
 
 
